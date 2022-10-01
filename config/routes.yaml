@@ -6,3 +6,11 @@
 register:
     path: /register
     controller: App\Controller\RegisterController::register
+
+Admin:
+    path: /admin
+    controller: App\Controller\Admin\AdminController:users
+
+Admin.remove:
+    path: /admin/{id}/remove
+    controller: App\Controller\Admin\AdminController:removeUser

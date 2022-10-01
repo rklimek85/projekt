@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    {% for user in users %}
+    {{ user.email }} <a href="{{ path("Admin.remove",{'id': user.id}) }}">USUŃ</a>
+    <br>
+    {% endfor %}
+{% endblock %}
