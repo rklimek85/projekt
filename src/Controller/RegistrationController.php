@@ -13,6 +13,7 @@ class RegistrationController extends AbstractController
 {
     /**
      * @Route("/register", name="user_registration")
+     * @Route("/login", name="app_login")
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -37,7 +38,7 @@ class RegistrationController extends AbstractController
             // maybe set a "flash" success message for the user
 
         //TODO: tu wpisać ścieżkę po rejestracji
-        return $this->redirectToRoute('replace_with_some_route');
+        return $this->redirectToRoute('Login/login.html.twig');
     }
 
     return $this->render(

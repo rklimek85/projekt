@@ -7,6 +7,10 @@ register:
     path: /register
     controller: App\Controller\RegisterController::register
 
+login:
+    path: /login
+    controller: App\Controller\SecurityController::login    
+
 Admin:
     path: /admin
     controller: App\Controller\Admin\AdminController:users
@@ -14,3 +18,4 @@ Admin:
 Admin.remove:
     path: /admin/{id}/remove
     controller: App\Controller\Admin\AdminController:removeUser
+
