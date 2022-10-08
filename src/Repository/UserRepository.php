@@ -9,6 +9,7 @@ use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 
+
 /**
  * @extends ServiceEntityRepository<User>
  *
@@ -32,6 +33,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
             $this->getEntityManager()->flush();
         }
     }
+    
 
     public function remove(User $entity, bool $flush = false): void
     {
@@ -42,6 +44,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         }
     }
 
+    
     /**
      * Used to upgrade (rehash) the user's password automatically over time.
      */

@@ -13,9 +13,12 @@ login:
 
 Admin:
     path: /admin
-    controller: App\Controller\Admin\AdminController:users
+    controller: App\Controller\Admin\AdminController::users
 
 Admin.remove:
     path: /admin/{id}/remove
-    controller: App\Controller\Admin\AdminController:removeUser
+    controller: App\Controller\Admin\AdminController::removeUser
 
+Admin.update:
+    path: /admin/{id}/update
+    controller: App\Controller\Admin\AdminController::updateUser
