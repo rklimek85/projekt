@@ -4,9 +4,8 @@
 
 {% block body %}
     {% for user in users %}
-    {{ user.username }} - {{ user.email }} 
-    <br><a href="{{path ("Admin.remove",{'id': user.id})}}">USUŃ</a>
-    <a href="{{path ("Admin.update", {'id': user.id})}}">EDYTUJ</a>
+    {{user.username}} : {{user.email}} <br> <a href ="{{ path("admin.remove",{'id': user.id}) }}"> Usuń użytkownika</a>
+    <a href ="{{ path("admin.edit",{'id': user.id})}}">Edytuj użytkownika</a>
     <br><br>
     {% endfor %}
 {% endblock %}

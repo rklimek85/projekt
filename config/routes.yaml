@@ -2,23 +2,27 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
-
 register:
-    path: /register
-    controller: App\Controller\RegisterController::register
+  path: /register
+  controller: App\Controller\RegisterController::register
+
+admin:
+  path: /admin
+  controller: App\Controller\Admin\AdminController::users
+
+
+admin.remove:
+  path: /admin/{id}/remove
+  controller: App\Controller\Admin\AdminController::removeUser
 
 login:
-    path: /login
-    controller: App\Controller\SecurityController::login    
+  path: /login
+  controller: App\Controller\SecurityController::login
 
-Admin:
-    path: /admin
-    controller: App\Controller\Admin\AdminController::users
+admin.update:
+  path: /admin/{id}/update
+  controller: App\Controller\Admin\AdminController::updateUser
 
-Admin.remove:
-    path: /admin/{id}/remove
-    controller: App\Controller\Admin\AdminController::removeUser
-
-Admin.update:
-    path: /admin/{id}/update
-    controller: App\Controller\Admin\AdminController::updateUser
+admin.edit:
+  path: /admin/edit/{id}
+  controller: App\Controller\Admin\AdminController::editUser
