@@ -19,10 +19,10 @@ login:
   path: /login
   controller: App\Controller\SecurityController::login
 
-admin.update:
-  path: /admin/{id}/update
-  controller: App\Controller\Admin\AdminController::updateUser
-
 admin.edit:
   path: /admin/edit/{id}
   controller: App\Controller\Admin\AdminController::editUser
+
+edit.password:
+  path: /edit/{id}
+  controller: App\Controller\UserPasswordController::editPassword
